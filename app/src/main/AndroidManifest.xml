@@ -15,7 +15,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
-        <activity android:name=".SplashScreen" android:theme="@style/Theme.ProyekLogin.NoActionBar"
+        <activity android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

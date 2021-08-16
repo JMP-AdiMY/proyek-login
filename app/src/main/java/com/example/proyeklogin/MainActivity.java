@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 import android.widget.Toast;
 import android.os.Bundle;
 
@@ -32,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         //Toolbar toolbar = findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle("Halaman Depan");
 
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     void bacaFileLogin() {
         File sdcard = getFilesDir();
-        File file = new File(sdcard,FILENAME);
+        File file = new File(sdcard, FILENAME);
         if (file.exists()) {
             StringBuilder text = new StringBuilder();
             try {
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     void bacaDataUser(String fileName) {
         File sdcard = getFilesDir();
-        File file = new File(sdcard,FILENAME);
+        File file = new File(sdcard, fileName);
         if (file.exists()) {
             StringBuilder text = new StringBuilder();
             try {
@@ -125,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_logout:
+            case R.id.action_tambah_menu:
                 tampilkanDialogKonfirmasiLogout();
                 break;
         }
